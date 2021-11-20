@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function randomInteger(min, max) {
+            let rand = min + Math.random() * (max - min)
+            return Math.floor(rand)
+        }
+        var arr = []
+        for (i = 1; i <= 15; i++) {
+            arr.push(randomInteger(-10, 30))
+        }
+        alert(arr)
+        var sr1 = 0
+        var sr2 = 0
+        var count1 = 0
+        var count2 = 0
+        var count3 = 0
+        for (i = 0; i <= 14; i++) {
+            if (arr[i] > 0) {
+                sr1 += arr[i]
+                count1++
+            } else if (arr[i] < 0) {
+                sr2 += arr[i]
+                count2++
+            } else {
+                count3++
+            }
+        }
+        sr1 = sr1 / count1
+        sr2 = sr2 / count2
+        alert("Средние п: " + Math.floor(sr1))
+        alert("Средние отриц: " + Math.floor(sr2))
+        alert("Кол-во нулей: " + count3)
+    </script>
+</body>
+
+</html>

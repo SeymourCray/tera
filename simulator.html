@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function simulator() {
+            let rand = 0 + Math.random() * (3)
+            return Math.floor(rand)
+        }
+        var count = 0
+        for (i = 1; i <= 1000000; i++) {
+            let a = simulator()
+            if (a == 0) {
+                count++
+            }
+        }
+        alert(count)
+    </script>
+</body>
+
+</html>
