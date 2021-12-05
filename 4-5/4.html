@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+        function Printproperties(obj) {
+            let info = ""
+            for (key in obj) {
+                info += key + " " + obj[key] + "\n"
+            }
+            return info
+        }
+
+        let user = {
+
+            name: "Джон",
+
+            age: 30,
+
+            balance: 40
+
+        };
+
+        user.sayHi = function () {
+
+            alert("Привет!");
+
+        };
+
+        user.sayHi(); // Привет!
+
+        let customer = {
+            goods: 5,
+            order: "correct",
+            status: "high",
+            number: "8 800 555 35 35",
+            name: "Bob"
+        }
+
+        alert(Printproperties(customer))
+
+        let u1 = {
+            name: "Bob",
+            balance: 3
+        }
+
+        let u2 = {
+            name: "Oleg",
+            balance: 4
+        }
+
+        let u3 = {
+            name: "Pavel",
+            balance: 5
+        }
+
+        let users = [u1, u2, u3]
+
+        let restaurant1 = {
+            name: "Dodo",
+            address: "moscow"
+        }
+
+        let restaurant2 = {
+            name: "MAc",
+            address: "paris"
+        }
+
+        let restaurant3 = {
+            name: "KFC",
+            address: "london"
+        }
+
+        let res = [restaurant1, restaurant2, restaurant3]
+
+        let order1 = {
+            name: "pizza",
+            status: "false"
+        }
+
+        let order2 = {
+            name: "chicken",
+            status: "true"
+        }
+
+        let orders = [order1, order2]
+
+        otv1 = prompt("имя пользователя")
+        otv2 = prompt("название ресторана")
+        otv3 = prompt("название заказа")
+        for (var i = 0; i < users.length; i++) {
+            if (users[i].name == otv1) {
+                alert(users[i].balance)
+            }
+        }
+        for (var i = 0; i < res.length; i++) {
+            if (res[i].name == otv2) {
+                alert(res[i].address)
+            }
+        }
+        for (var i = 0; i < orders.length; i++) {
+            if (orders[i].name == otv3) {
+                alert(orders[i].status)
+            }
+        }
+
+        function User1(name) {
+
+            this.name = name;
+
+            this.isAdmin = false;
+
+        }
+
+        let us = new User1("Вася");
+
+        alert(us.name); // Вася
+
+        alert(us.isAdmin); // false
+
+        function User(name) {
+
+            this.name = name;
+
+            this.sayHi = function () {
+
+                alert("Меня зовут: " + this.name);
+
+            };
+
+        }
+
+        let vasya = new User("Вася");
+
+        vasya.sayHi(); // Меня зовут: Вася
+
+    </script>
+</body>
+
+</html>

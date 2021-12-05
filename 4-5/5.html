@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function showMessage() {
+
+            let message = "Привет, я JavaScript!"; // локальная переменная
+
+            alert(message);
+
+        }
+
+        showMessage(); // Привет, я JavaScript!
+
+
+
+        function CheckPalindrom(str) {
+            let b = str.split("").reverse().join("")
+            if (str == b) {
+                alert("Палиндром")
+            } else {
+                alert("Не палиндром")
+            }
+        }
+        function randomInteger(min, max) {
+            let rand = min + Math.random() * (max - min)
+            return Math.floor(rand)
+        }
+        var arr = []
+        for (i = 1; i <= 15; i++) {
+            arr.push(randomInteger(-10, 30))
+        }
+
+
+        function Replace(massive) {
+            for (i = 0; i <= massive.length; i++) {
+                if (massive[i] < 0) {
+                    massive[i] = massive[i] ** 2
+                }
+            }
+            return massive
+        }
+
+        class User {
+
+            constructor(name) {
+                this.name = name;
+            }
+
+            printName() {
+                alert(this.name);
+            }
+            sayHello() {
+                let message = "Hello " + this.name
+                alert(message)
+            }
+        }
+
+        let a = prompt("Введите имя")
+        CheckPalindrom(a)
+        alert(arr)
+        
+        alert(Replace(arr))
+        let b = new User("Ilya")
+        b.printName()
+        b.sayHello()
+
+        class Reverse {
+
+            constructor(name) {
+                this.name = name.split("").reverse().join("")
+            }
+
+            printReversed() {
+                alert(this.name)
+            }
+        }
+
+        c = new Reverse("hello")
+        c.printReversed()
+    </script>
+</body>
+
+</html>
